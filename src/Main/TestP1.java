@@ -35,6 +35,13 @@ public class TestP1 {
         System.out.println("Descartar elemento: " + Dice.discardElement(3));
         
         // GameState
+        GameState game1 = new GameState();
         
+        System.out.println("\nLaberinto: " + game1.getLabyrinthv());
+        System.out.println("Jugadores: " + game1.getPlayers());
+        System.out.println("Monstruos: " + game1.getMonsters());
+        System.out.println("Jugador actual: " + game1.getCurrentPlayer());
+        System.out.println("Hay jugador: " + game1.isWinner());
+        System.out.println("Situaciones relevantes: " + game1.getLog());
     }
 }
