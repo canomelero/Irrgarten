@@ -22,21 +22,11 @@ public class GameState {
     }
     
     public GameState(GameState otro) {
-        this.labyrinthv = otro.labyrinthv;
-        this.players = otro.players;
-        this.monsters = otro.monsters;
-        this.currentPlayer = otro.currentPlayer;
-        this.winner = otro.winner;
-        this.log = otro.log;
+        this(otro.labyrinthv, otro.players, otro.monsters, otro.currentPlayer, otro.winner, otro.log);
     }
     
     public GameState() {
-        this.labyrinthv = "";
-        this.players = "";
-        this.monsters = "";
-        this.currentPlayer = -1;
-        this.winner = false;
-        this.log = "";
+        this("", "", "", 0, false, "");
     }
  
     

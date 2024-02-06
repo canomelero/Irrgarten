@@ -14,13 +14,11 @@ public class Weapon {
     }
 
     public Weapon(Weapon otra) {
-        this.power = otra.power;
-        this.uses = otra.uses;
+        this(otra.power, otra.uses);
     }
     
     public Weapon(){
-        this.power = 0;
-        this.uses = 0;
+        this(0, 0);
     }
     
     

@@ -14,13 +14,11 @@ public class Shield {
     }
     
     public Shield(Shield otro) {
-        this.protection = otro.protection;
-        this.uses = otro.uses;
+        this(otro.protection, otro.uses);
     }
     
     public Shield() {
-        this.protection = 0;
-        this.uses = 0;
+        this(0, 0);
     }
     
     
