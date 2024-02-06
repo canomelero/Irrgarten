@@ -19,20 +19,20 @@ public class Dice {
     // Métodos
     // Precondición: max >= 0
     public static int randomPos(int max) {
-        return generator.nextInt()*max + 0;
+        return generator.nextInt(max) + 0;
     }
     
     // Precondición: nplayers >= 0
     public static int whoStarts(int nplayers) {
-        return generator.nextInt()*nplayers + 0;
+        return generator.nextInt(nplayers) + 0;
     }
     
     public static float randomIntelligence() {
-       return generator.nextFloat()*MAX_INTELLIGENCE + 0; 
+       return generator.nextFloat(MAX_INTELLIGENCE) + 0; 
     }
     
     public static float randomStrength() {
-        return generator.nextFloat()*MAX_STRENGTH + 0;
+        return generator.nextFloat(MAX_STRENGTH) + 0;
     }
     
     public static boolean resurrectPlayer() {
@@ -47,31 +47,31 @@ public class Dice {
     }
     
     public static int weaponsReward() {
-        return generator.nextInt()*(WEAPONS_REWARD+1) + 0;
+        return generator.nextInt(WEAPONS_REWARD+1) + 0;
     }
     
     public static int shieldsReward() {
-        return generator.nextInt()*SHIELDS_REWARD + 0;
+        return generator.nextInt(SHIELDS_REWARD) + 0;
     }
     
     public static int healthReward() {
-        return generator.nextInt()*HEALTH_REWARD + 0;
+        return generator.nextInt(HEALTH_REWARD) + 0;
     }
     
     public static float weaponPower() {
-        return generator.nextFloat()*MAX_ATTACK + 0;
+        return generator.nextFloat(MAX_ATTACK) + 0;
     }
     
     public static float shieldPower() {
-        return generator.nextFloat()*MAX_SHIELD + 0;
+        return generator.nextFloat(MAX_SHIELD) + 0;
     }
     
     public static int usesLeft() {
-        return generator.nextInt()*MAX_USES + 0;
+        return generator.nextInt(MAX_USES) + 0;
     }
     
     public static float intensity(float competence) {
-        return generator.nextFloat()*competence + 0;
+        return generator.nextFloat(competence) + 0;
     }
     
     public static boolean discardElement(int usesLeft) {
