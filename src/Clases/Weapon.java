@@ -28,8 +28,8 @@ public class Weapon {
     public float attack() {
         float ataque = this.power;
         
-        if(this.uses > 0) {
-            this.uses--;
+        if(uses > 0) {
+            uses--;
         }
         else {
             ataque = 0;
@@ -41,5 +41,9 @@ public class Weapon {
     @Override
     public String toString() {
         return "W[" + power + ", " + uses + ']';
+    }
+    
+    public boolean discard() {
+        return Dice.discardElement(uses);
     }
 }
