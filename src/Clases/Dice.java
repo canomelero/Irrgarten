@@ -66,6 +66,7 @@ public class Dice {
         return generator.nextFloat(MAX_SHIELD) + 0;
     }
     
+    // Genera un número aleatorio de usos para las armas y escudos
     public static int usesLeft() {
         return generator.nextInt(MAX_USES) + 0;
     }

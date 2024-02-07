@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Jorge%20Cano%20Melero/Desktop/informatica/laberinto/Irrgarten/src/Enumerados/Orientation.java</file>
-            <file>file:/C:/Users/Jorge%20Cano%20Melero/Desktop/informatica/laberinto/Irrgarten/src/Enumerados/GameCharacter.java</file>
-            <file>file:/C:/Users/Jorge%20Cano%20Melero/Desktop/informatica/laberinto/Irrgarten/src/Clases/Weapon.java</file>
-            <file>file:/C:/Users/Jorge%20Cano%20Melero/Desktop/informatica/laberinto/Irrgarten/src/Clases/Shield.java</file>
-            <file>file:/C:/Users/Jorge%20Cano%20Melero/Desktop/informatica/laberinto/Irrgarten/src/Enumerados/Directions.java</file>
+            <file>file:/C:/Users/Jorge%20Cano%20Melero/Desktop/informatica/laberinto/Irrgarten/src/Clases/Game.java</file>
+            <file>file:/C:/Users/Jorge%20Cano%20Melero/Desktop/informatica/laberinto/Irrgarten/src/Clases/Labyrinth.java</file>
+            <file>file:/C:/Users/Jorge%20Cano%20Melero/Desktop/informatica/laberinto/Irrgarten/src/Clases/Player.java</file>
+            <file>file:/C:/Users/Jorge%20Cano%20Melero/Desktop/informatica/laberinto/Irrgarten/src/Clases/Monster.java</file>
         </group>
     </open-files>
 </project-private>
