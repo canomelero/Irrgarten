@@ -10,7 +10,7 @@ public class Player {
     private static int INITIAL_HEALTH = 10;
     private static int HITS2LOSE = 3;
     private String name;
-    private char number;
+    private int number;     // uso un int en vez de char para evitar castings
     private float intelligence;
     private float strength;
     private float health;
@@ -22,9 +22,9 @@ public class Player {
     
     
     // Constructores
-    public Player(char number, float intelligence, float strength) {
+    public Player(int number, float intelligence, float strength) {
         this.number = number;
-        this.name = "Player " + number;
+        this.name = "Player " + String.valueOf(number);
         this.intelligence = intelligence;
         this.strength = strength;
         // setPos(0, 0);
@@ -56,7 +56,7 @@ public class Player {
         return col;
     }
     
-    public char getNumber() {
+    public int getNumber() {
         return number;
     }
     
@@ -66,13 +66,7 @@ public class Player {
     }
     
     public boolean dead() {
-        boolean muerto = false;
-        
-        if(health <= 0) {
-            muerto = true;
-        }
-        
-        return muerto;
+        return health <= 0;
     }
     
     public Directions move(Directions direction, Directions[] validMoves) {
@@ -147,7 +141,9 @@ public class Player {
     }
     
     private void gotWounded() {
-        health--;
+        if(health > 0) {            // sin el if o con el ?????
+            health--;
+        }
     }
     
     private void incConsecutiveHits() {

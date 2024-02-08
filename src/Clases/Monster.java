@@ -13,32 +13,26 @@ public class Monster {
     
     
     // Constructores
-    public Monster(String name, float intelligence, float strength, float health, int row, int col) {
+    public Monster(String name, float intelligence, float strength, float health) {
         this.name = name;
         this.intelligence = intelligence;
         this.strength = strength;
         this.health = health;
-        setPos(row, col);
+        setPos(0, 0);
     }
     
     public Monster(Monster otro) {
-        this(otro.name, otro.intelligence, otro.strength, otro.health, otro.row, otro.col);
+        this(otro.name, otro.intelligence, otro.strength, otro.health);
     }
     
     public Monster() {
-        this("", 0, 0, 0, 0, 0);
+        this("", 0, 0, 0);
     }
     
     
     // Métodos
     public boolean dead() {
-        boolean muerto = false;
-        
-        if(health <= 0) {
-            muerto = true;
-        }
-        
-        return muerto;
+        return health <= 0;
     }
     
     public float attack() {
