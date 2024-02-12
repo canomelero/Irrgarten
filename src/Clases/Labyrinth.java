@@ -10,7 +10,7 @@ public class Labyrinth {
     private static final char MONSTER_CHAR = 'M';
     private static final char COMBAT_CHAR = 'C';
     private static final char EXIT_CHAR = 'E';
-    private static final int ROW = 0;
+    private static final int ROW = 0;       // casilla de entrada
     private static final int COL = 1;
     private int nRows;
     private int nCols;
@@ -27,7 +27,30 @@ public class Labyrinth {
         this.nCols = nCols;
         this.exitRow = exitRow;
         this.exitCol = exitCol;
-        // iniciar matrices ???
+        this.labyrinth = new char[nRows][nCols];
+        this.monsters = new Monster[nRows][nCols];
+        this.players = new Player[nRows][nCols];
+        
+        // Iniciar las casillas de cada matriz a los valores correspondientes
+        for(int f = 0; f < nRows; f++) {
+            for(int c = 0; c < nCols; c++) {
+                if(f == exitRow && c == exitCol) {
+                    labyrinth[f][c] = EXIT_CHAR;
+                }
+                else if(f == ROW && c == COL) {
+                    labyrinth[f][c] = EMPTY_CHAR;
+                }
+                else if(f == 0 || f == nRows-1 || c == 0 || c == nCols-1) {
+                    labyrinth[f][c] = BLOCK_CHAR;
+                }
+                else {
+                    labyrinth[f][c] = EMPTY_CHAR;  
+                }
+               
+                monsters[f][c] = null;
+                players[f][c] = null;
+            }
+        }
     }
     
     public Labyrinth(Labyrinth otro) {
@@ -67,15 +90,27 @@ public class Labyrinth {
 
     @Override
     public String toString() {
+        String strMonsters = "", 
+               strPlayers = "", 
+               strLabyrinth = "";
+        
+        for(int f = 0; f < nRows; f++) {
+            for(int c = 0; c < nCols; c++) {
+                strLabyrinth += labyrinth[f][c] + " ";
+            }
+           
+            strLabyrinth += "\n";
+        }
+        
         return "Labyrinth{" + "nRows=" + nRows + ", nCols=" + nCols + ", exitRow=" + exitRow + ", exitCol=" 
-                + exitCol + ", monsters=" + monsters + ", labyrinth=" + labyrinth + ", players=" + players + '}';
+                + exitCol + ", labyrinth= \n" + strLabyrinth + '}';
     }
     
     public void addMonster(int row, int col, Monster monster) {
         if(posOk(row, col) && emptyPos(row, col)) {
             labyrinth[row][col] = MONSTER_CHAR;
             monsters[row][col] = monster;
-            monster.setPos(row, col);
+            monsters[row][col].setPos(row, col);
         }
     }
     

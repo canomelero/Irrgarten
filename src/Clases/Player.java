@@ -27,8 +27,9 @@ public class Player {
         this.name = "Player " + String.valueOf(number);
         this.intelligence = intelligence;
         this.strength = strength;
-        // setPos(0, 0);
-        // resurrect();
+        this.row = 0;   // ??
+        this.col = 0;   // ??
+        resurrect();    // al crear un jugador toma los mismos valores iniciales que si resucita
     }
     
     public Player(Player otro) {
@@ -43,9 +44,9 @@ public class Player {
     // Métodos
     public void resurrect() {
         resetHits();
-        this.health = 0;
-        this.weapons = new ArrayList<>();
-        this.shields = new ArrayList<>();
+        this.health = INITIAL_HEALTH;
+        this.weapons = new ArrayList<>(MAX_WEAPONS);
+        this.shields = new ArrayList<>(MAX_SHIELDS);
     }
     
     public int getRow() {
@@ -89,7 +90,7 @@ public class Player {
     public String toString() {
         return "Player{" + "name=" + name + ", number=" + number + ", intelligence=" + intelligence + ", strength=" + strength + ", "
                 + "health=" + health + ", row=" + row + ", col=" + col + ", consecutiveHits=" + consecutiveHits + ", weapons=" + weapons 
-                    + ", shields=" + shields + '}';
+                    + ", shields=" + shields + "}\n";
     }
 
     private void receiveWeapon(Weapon w) {

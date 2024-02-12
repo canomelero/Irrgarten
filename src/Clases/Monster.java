@@ -51,7 +51,7 @@ public class Monster {
     @Override
     public String toString() {
         return "Monster{" + "name=" + name + ", intelligence=" + intelligence + ", strength=" 
-                + strength + ", health=" + health + ", row=" + row + ", col=" + col + '}';
+                + strength + ", health=" + health + ", row=" + row + ", col=" + col + "}\n";
     }
     
     private void gotWounded() {
