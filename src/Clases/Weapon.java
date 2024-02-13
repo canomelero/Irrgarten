@@ -18,7 +18,7 @@ public class Weapon {
     }
     
     public Weapon(){
-        this(0, 0);
+        this(Dice.weaponPower(), Dice.usesLeft());
     }
     
     

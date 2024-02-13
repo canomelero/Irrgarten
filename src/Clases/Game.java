@@ -73,8 +73,6 @@ public class Game {
             monsters.add(m);
             labyrinth.addMonster(i+2, i+2, m);
         }
-        
-        // Se añaden jugadores ????
     }
     
     private void nextPlayer() {

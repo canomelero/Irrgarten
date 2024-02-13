@@ -18,7 +18,7 @@ public class Shield {
     }
     
     public Shield() {
-        this(0, 0);
+        this(Dice.shieldPower(), Dice.usesLeft());
     }
     
     
