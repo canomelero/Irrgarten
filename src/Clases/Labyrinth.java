@@ -16,9 +16,9 @@ public class Labyrinth {
     private int nCols;
     private int exitRow;
     private int exitCol;
-    private Monster[][] monsters;   // matriz de monster o de tipo char ???
+    private Monster[][] monsters;   
     private char[][] labyrinth;
-    private Player[][] players;     // matriz de players o de tipo char ???
+    private Player[][] players;     
     
     
     // Constructores
@@ -71,20 +71,9 @@ public class Labyrinth {
     }
     
     public boolean haveAWinner() {
-        boolean ganador = false, encontrado = false;
-        int fila = -1, col = -1;
+        boolean ganador = false;
         
-        for(int f = 0; f < nRows && !encontrado; f++) {
-            for(int c = 0; c < nCols && !encontrado; c++) {
-                if(exitPos(f, c)) {
-                    fila = f;
-                    col = c;
-                    encontrado = true;
-                }
-            }
-        }
-        
-        if(encontrado && players[fila][col] != null) {
+        if(players[exitRow][exitCol] != null) {
             ganador = true;
         }
         
@@ -214,7 +203,7 @@ public class Labyrinth {
             }
             else {
                 labyrinth[row][col] = EMPTY_CHAR;
-                monsters[row][col] = null;      // ??
+                monsters[row][col] = null;      
             }
         }
     }

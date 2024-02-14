@@ -28,8 +28,8 @@ public class Player {
         this.name = "Player " + String.valueOf(number);
         this.intelligence = intelligence;
         this.strength = strength;
-        this.row = 0;   // ??
-        this.col = 0;   // ??
+        this.row = 0;   
+        this.col = 0;  
         resurrect();    // al crear un jugador toma los mismos valores iniciales que si resucita
     }
     
@@ -218,7 +218,7 @@ public class Player {
     }
     
     private void gotWounded() {
-        if(health > 0) {            // sin el if o con el ?????
+        if(health > 0) {            
             health--;
         }
     }

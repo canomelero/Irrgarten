@@ -2,12 +2,15 @@
 package Main;
 import Clases.*;
 import Enumerados.*;
+import Irrgarten.UI.TextUI;
+import irrgarten.controller.Controller;
 
 public class main {
     public static void main(String[] args) {
-        // TestP1 test = new TestP1();
-        TestP2 test = new TestP2();
+        TextUI vista = new TextUI();
+        Game juego1 = new Game(1);
+        Controller controlador = new Controller(juego1, vista);
         
-        test.main();
+        controlador.play();
     }
 }
